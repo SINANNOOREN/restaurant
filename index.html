@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Malabar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  
+ <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-transparent fixed h-[80px] w-full top-0 bottom-0 z-50 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-extrabold text-gray-500">Malabar <span class="text-[#c5a47e]">Restaurant</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 font-semibold text-lg">
+                    <a href="#" class="text-gray-500 hover:text-[#c5a47e] transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-500 hover:text-[#c5a47e] transition duration-300">About</a>
+                    <a href="#gallery" class="text-gray-500 hover:text-[#c5a47e] transition duration-300">Gallery</a>
+                  
+                    <a href="#contact" class="text-gray-500 hover:text-[#c5a47e] transition duration-300">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="#" class="bg-[#c5a47e] text-white px-5 py-2 rounded-full shadow-lg hover:bg-opacity-80 transition duration-300">Book Table</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-6 px-6 space-y-6 text-lg font-semibold">
+            
+            <a href="#"  class="block text-gray-700 hover:text-[#c5a47e] transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#about" class="block text-gray-700 hover:text-[#c5a47e] transition duration-300 "  onclick="document.getElementById('mobile-menu').classList.add('hidden')"">About</a>
+            <a href="#gallery" class="block text-gray-700 hover:text-[#c5a47e] transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Gallery</a>
+            <a href="#contact" class="block text-gray-700 hover:text-[#c5a47e] transition duration-300"   onclick="document.getElementById('mobile-menu').classList.add('hidden')"">Contact</a>
+            <a href="#" class="block bg-[#c5a47e] text-white text-center py-3 rounded-full shadow-md hover:bg-opacity-80 transition duration-300">Book Table </a>
+        </div>
+    </nav>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+   
+
+   
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Experience the Royal Flavors of Malabar</h1>
+            <p>A culinary journey through Kerala rich heritage, where tradition meets luxury on your plate.</p>
+            <button class="cta-button">Book a Table</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <!-- History Timeline -->
+                <div class="history-timeline">
+                    <h2 class="section-title">Our Journey</h2>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1995</div>
+                            <div class="timeline-content">
+                                <h3>Our Story Beginnings</h3>
+                                <p>In 1995, Royal Malabar was born from a passion for authentic Kerala flavors. What started as a small family-run kitchen serving traditional Malabar delicacies quickly became a local favorite. Our commitment to using fresh, locally sourced ingredients and age-old recipes made us a household name in Kerala’s culinary scene.</p>
+                          
+                            </div>
+                        </div>
+        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2005</div>
+                            <div class="timeline-content">
+                                <h3>Milestone year</h3>
+                              <p>By 2005, Royal Malabar had grown into a well-known restaurant, attracting food lovers from across Kerala. We expanded our menu, introducing signature dishes that fused tradition with creativity. Our focus on exceptional service and unforgettable flavors helped us build a loyal community of diners.</p>
+                            </div>
+                        </div>
+        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-content">
+                                <h3>New chapter</h3>
+                              <p>By 2020, Royal Malabar had evolved into a fine dining experience, blending tradition with modern luxury. We redefined Malabar cuisine by introducing innovative flavors while preserving its rich heritage. Today, we continue to serve exquisite dishes in an ambiance that reflects Kerala’s royal elegance, offering a dining experience like no other.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Culinary Philosophy -->
+                <div class="philosophy-section">
+                    <div class="philosophy-image">
+                        <img class="md:h-[600px]" src="https://images.unsplash.com/photo-1555244162-803834f70033" alt="Culinary Art">
+                    </div>
+                    <div class="philosophy-content">
+                        <h2 class="font-medium">Our Philosophy</h2>
+                        <div class="philosophy-grid">
+                            <div class="philosophy-card">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Sustainable Sourcing</h4>
+                                <p>85% of ingredients sourced from local organic farms within 100-mile radius</p>
+                            </div>
+                            <div class="philosophy-card">
+                                <i class="fas fa-cheese"></i>
+                                <h4>Artisanal Quality</h4>
+                                <p>Handcrafted dishes using traditional techniques perfected over decades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Team Section -->
+                <div class="team-section">
+                    <h2 class="section-title">Meet Our Masters</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-image">
+                                <img src="https://www.workbc.ca/sites/default/files/styles/hero_image/public/NTI5NzE_Oe7MEV5cqdKGbn12-6321-NOC.jpg?itok=5JeNyGk5" alt="Chef Éric Durand">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="member-name">chef sarah</h3>
+                            <p>Executive Chef & Founder</p>
+                            <p class="member-bio">3x Michelin-starred chef with 10+ years of culinary experience</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Core Values -->
+                <div class="values-section">
+                    <div class="value-card">
+                        <div class="value-number">150+</div>
+                        <h4>International Awards</h4>
+                        <p>Recognized globally for culinary excellence</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-number">98%</div>
+                        <h4>Guest Satisfaction</h4>
+                        <p>Consistent 5-star reviews across platforms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+    </section>
+
+    <!-- Gallery Section -->
+   
+        
+        <!-- Gallery Item 2 -->
+       
+
+        <section class="gallery-page" id="gallery">
+            <div class="gallery-container">
+                <div class="gallery-header">
+                    <h2 class="section-title">Gallery</h2>
+                    <div class="gallery-filter">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="food">Special Dishes</button>
+                        <button class="filter-btn" data-filter="interior">Our Space</button>
+                        <button class="filter-btn" data-filter="events">Special Events</button>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const filterButtons = document.querySelectorAll('.filter-btn');
+                            const galleryItems = document.querySelectorAll('.gallery-item');
+
+                            filterButtons.forEach(button => {
+                                button.addEventListener('click', () => {
+                                    const filter = button.getAttribute('data-filter');
+
+                                    // Remove active class from all buttons
+                                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                                    // Add active class to the clicked button
+                                    button.classList.add('active');
+
+                                    // Show/Hide gallery items based on filter
+                                    galleryItems.forEach(item => {
+                                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                                            item.style.display = 'block';
+                                        } else {
+                                            item.style.display = 'none';
+                                        }
+                                    });
+                                });
+                            });
+                        });
+                    </script>
+                    </div>
+                </div>
+        
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item food" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" loading="lazy" alt="Signature Dish">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Truffle Symphony</h3>
+                                <p>Our award-winning beef Wellington</p>
+                                <div class="social-share">
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    <button class="like-btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          <!-- Gallery Item 1 -->
+                    <div class="gallery-item food" data-category="food">
+                        <img src="https://shwetainthekitchen.com/wp-content/uploads/2023/06/veg-fried-rice.jpg" loading="lazy" alt="Signature Dish">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Fried Rice</h3>
+                                <p>Our award-winning beef Wellington</p>
+                                <div class="social-share">
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    <button class="like-btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add 11 more gallery items with different categories -->
+                    
+                    <!-- Example Interior Item -->
+                    <div class="gallery-item interior" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47" loading="lazy" alt="Dining Room">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Elegant Dining</h3>
+                                <p>Our Michelin-starred dining room</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Example Event Item -->
+                    <div class="gallery-item events" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033" loading="lazy" alt="Wine Tasting">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Vintage Evenings</h3>
+                                <p>Exclusive wine pairing events</p>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Gallery Item 1 -->
+                      <div class="gallery-item food" data-category="food">
+                        <img src="https://plus.unsplash.com/premium_photo-1679924471066-dd984e92f395?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGl6emF8ZW58MHx8MHx8fDA%3D" loading="lazy" alt="Signature Dish">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>pizza</h3>
+                                <p>Our award-winning beef Wellington</p>
+                                <div class="social-share">
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    <button class="like-btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                      <!-- Gallery Item 1 -->
+                      <div class="gallery-item food" data-category="food">
+                        <img src="https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe.jpg" loading="lazy" alt="Signature Dish">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Burger</h3>
+                                <p>Our award-winning beef Wellington</p>
+                                <div class="social-share">
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    <button class="like-btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+               
+            </div>
+        </section>
+        
+    
+        
+   
+    
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you - reserve your table or send us a message</p>
+            </div>
+    
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Phone Number</label>
+                        </div>
+    
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value=""></option>
+                                <option value="reservation">Table Reservation</option>
+                                <option value="event">Private Event Inquiry</option>
+                                <option value="feedback">Customer Feedback</option>
+                            </select>
+                            <label for="subject">Subject</label>
+                        </div>
+    
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+    
+                        <div class="form-actions">
+                            <button type="submit" class="cta-button">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <button type="button" class="cta-button secondary">
+                                <span>Book a Table</span>
+                                <i class="fas fa-calendar-check"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-content">
+                                <h4>Visit Us</h4>
+                                <p>india,kerala<br>calicut,682016</p>
+                            </div>
+                        </div>
+    
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="info-content">
+                                <h4>Opening Hours</h4>
+                                <p>Monday - Saturday: 11:30 AM - 10:00 PM<br>
+                                Sunday: 12:00 PM - 9:00 PM</p>
+                            </div>
+                        </div>
+    
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+15551234567">91 1234567890</a></p>
+                            </div>
+                        </div>
+    
+                        <div class="map-container">
+                            <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.981748899847!2d75.77539791478752!3d11.258753991985287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba659edeb1fd10b%3A0x14f4d5c41b4e8f6!2sCalicut%2C%20Kerala!5e0!3m2!1sen!2sin!4v1718870943079!5m2!1sen!2sin"          
+                            style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Social Media -->
+          
+        </div>
+    </section>
+    
+    <div class="fixed bottom-4 right-4 flex flex-col space-y-2">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918129780845" target="_blank" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="bg-[#c5a47e] text-white p-4 rounded-full shadow-lg  transition duration-300 hidden">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+
+    
+<!-- Add this before closing body tag -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Royal Malabar</h4>
+            <p>Experience the pinnacle of culinary excellence since 1995. Our passion for perfection is served in every dish.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#menu">Home</a></li>
+                <li><a href="#gallery">About</a></li>
+                <li><a href="#about">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        
+
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-media">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+               
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2025. All rights reserved. </p>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
